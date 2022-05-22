@@ -538,7 +538,7 @@ var scale_x = 0.7;
 var scale_y = 0.7;
 function preload() {
     data_table = loadTable('https://github.com/Louisedlr/Desinformation-on-global-warning/blob/master/data.csv', 'csv');
-    img_profil = loadImage('../user.png');
+    img_profil = loadImage('https://github.com/Louisedlr/Desinformation-on-global-warning/blob/master/user.png');
 }
 function setup() {
     p6_CreateCanvas();
