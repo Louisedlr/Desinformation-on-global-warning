@@ -67,7 +67,7 @@ let scale_y = 0.7;
 
 
 function preload() {  
-  data_table = loadTable('../data.csv', 'csv');
+  data_table = loadTable('/Users/louisedelrieu/Documents/IMAC/IMAC 2/S4/interactivite/climate', 'csv');
   img_profil= loadImage('../user.png');
 }
 
