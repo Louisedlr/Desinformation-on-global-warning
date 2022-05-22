@@ -537,7 +537,7 @@ var cate_display = ' ';
 var scale_x = 0.7;
 var scale_y = 0.7;
 function preload() {
-    data_table = loadTable('/Users/louisedelrieu/Documents/IMAC/IMAC 2/S4/interactivite/climate', 'csv');
+    data_table = loadTable('../../data.csv', 'csv');
     img_profil = loadImage('../user.png');
 }
 function setup() {
