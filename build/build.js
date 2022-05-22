@@ -541,7 +541,7 @@ function preload() {
     img_profil = loadImage('../user.png');
 }
 function setup() {
-    createCanvas(1920, 1080);
+    p6_CreateCanvas();
     for (var i = 0; i < data_table.getRowCount(); i++) {
         tweet_table.push(data_table.getString(i, 3));
         category_table.push(data_table.getString(i, 5));
@@ -679,7 +679,7 @@ function mouseClicked() {
     }
 }
 function draw() {
-    background(246, 244, 236);
+    background('#f8f8fa');
     noStroke();
     scale(scale_x, scale_y);
     category_1_table = fill_category_table(1);

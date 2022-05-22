@@ -72,8 +72,8 @@ function preload() {
 }
 
 function setup() {
-  //p6_CreateCanvas()
-  createCanvas(1920, 1080);
+  p6_CreateCanvas()
+  //createCanvas(1920, 1080);
 
   for(var i = 0; i < data_table.getRowCount(); i++)
     {
@@ -356,7 +356,7 @@ function mouseClicked() {
 
 function draw() {
   
-  background(246, 244, 236);
+  background('#f8f8fa');
   noStroke();
 
   scale(scale_x,scale_y)
