@@ -534,12 +534,14 @@ var category_4_table_color = ['#C795CC', '#D7ABDC', '#8D4A94', '#A168A7'];
 var category_2_table_color = ['#B0A7E3', '#796EBD'];
 var category_1_table_color = ['#7580ED', '#B7BDFB', '#5562E5', '#7580ED', '#919AF1', '#4452DE'];
 var cate_display = ' ';
+var scale_x = 0.7;
+var scale_y = 0.7;
 function preload() {
     data_table = loadTable('../data.csv', 'csv');
     img_profil = loadImage('../user.png');
 }
 function setup() {
-    createCanvas(1920, 1080);
+    p6_CreateCanvas();
     for (var i = 0; i < data_table.getRowCount(); i++) {
         tweet_table.push(data_table.getString(i, 3));
         category_table.push(data_table.getString(i, 5));
@@ -549,14 +551,14 @@ function windowResized() {
     p6_ResizeCanvas();
 }
 function mouseClicked() {
-    var x = 710;
-    var y = 780;
-    var radius = category_sum_table[2] * exp(0.4) / 2;
+    var x = 710 * scale_x;
+    var y = 780 * scale_y;
+    var radius = category_sum_table[2] * exp(0.4) / 2 * scale_x;
     var magnitude = dist(mouseX, mouseY, x, y);
-    var origin = createVector(710, 780);
-    var target = createVector(mouseX - 710, (mouseY - 780) * -1);
+    var origin = createVector(710 * scale_x, 780 * scale_x);
+    var target = createVector(mouseX - 710 * scale_x, (mouseY - 780 * scale_x) * -1);
     var angle = origin.angleBetween(target);
-    var withinDist = magnitude > radius - 35 && magnitude < radius;
+    var withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
     var withinAngle = angle > -1.17 && angle < -0.84;
     if (withinAngle && withinDist) {
         print("cate 3_1");
@@ -572,14 +574,14 @@ function mouseClicked() {
         print("cate 3_3");
         cate_display = "3_3";
     }
-    x = 270;
-    y = 850;
-    radius = category_sum_table[4] * exp(0.4) / 2;
+    x = 270 * scale_x;
+    y = 850 * scale_x;
+    radius = category_sum_table[4] * exp(0.4) / 2 * scale_x;
     magnitude = dist(mouseX, mouseY, x, y);
-    origin = createVector(270, 850);
-    target = createVector(mouseX - 270, (mouseY - 850) * -1);
+    origin = createVector(270 * scale_x, 850 * scale_x);
+    target = createVector(mouseX - 270 * scale_x, (mouseY - 850 * scale_x) * -1);
     angle = origin.angleBetween(target);
-    withinDist = magnitude > radius - 35 && magnitude < radius;
+    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
     withinAngle = angle > 1.98 && angle < 2.55;
     if (withinAngle && withinDist) {
         print("cate 5_1");
@@ -590,14 +592,14 @@ function mouseClicked() {
         print("cate 5_2");
         cate_display = "5_2";
     }
-    x = 450;
-    y = 490;
-    radius = category_sum_table[3] * exp(0.4) / 2;
+    x = 450 * scale_x;
+    y = 490 * scale_x;
+    radius = category_sum_table[3] * exp(0.4) / 2 * scale_x;
     magnitude = dist(mouseX, mouseY, x, y);
-    origin = createVector(450, 490);
-    target = createVector(mouseX - 450, (mouseY - 490) * -1);
+    origin = createVector(450 * scale_x, 490 * scale_x);
+    target = createVector(mouseX - 450 * scale_x, (mouseY - 490 * scale_x) * -1);
     angle = origin.angleBetween(target);
-    withinDist = magnitude > radius - 35 && magnitude < radius;
+    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
     withinAngle = angle < -2.27 && angle > -2.5;
     if (withinAngle && withinDist) {
         print("cate 4_2");
@@ -618,14 +620,14 @@ function mouseClicked() {
         print("cate 4_4");
         cate_display = "4_4";
     }
-    x = 200;
-    y = 240;
-    radius = category_sum_table[1] * exp(0.4) / 2;
+    x = 200 * scale_x;
+    y = 240 * scale_x;
+    radius = category_sum_table[1] * exp(0.4) / 2 * scale_x;
     magnitude = dist(mouseX, mouseY, x, y);
-    origin = createVector(200, 240);
-    target = createVector(mouseX - 200, (mouseY - 240) * -1);
+    origin = createVector(200 * scale_x, 240 * scale_x);
+    target = createVector(mouseX - 200 * scale_x, (mouseY - 240 * scale_x) * -1);
     angle = origin.angleBetween(target);
-    withinDist = magnitude > radius - 35 && magnitude < radius;
+    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
     withinAngle = (angle > 2.8 && angle < PI) || (angle < -0.88 && angle > -PI);
     if (withinAngle && withinDist) {
         print("cate 2_1");
@@ -636,15 +638,15 @@ function mouseClicked() {
         print("cate 2_3");
         cate_display = "2_3";
     }
-    x = 550;
-    y = 170;
-    radius = category_sum_table[0] * exp(0.4) / 2;
+    x = 550 * scale_x;
+    y = 170 * scale_x;
+    radius = category_sum_table[0] * exp(0.4) / 2 * scale_x;
     magnitude = dist(mouseX, mouseY, x, y);
-    origin = createVector(550, 170);
-    target = createVector(mouseX - 550, (mouseY - 170) * -1);
+    origin = createVector(550 * scale_x, 170 * scale_x);
+    target = createVector(mouseX - 550 * scale_x, (mouseY - 170 * scale_x) * -1);
     angle = origin.angleBetween(target);
     print(angle);
-    withinDist = magnitude > radius - 35 && magnitude < radius;
+    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
     withinAngle = angle > -1.8 && angle < -1.4;
     if (withinAngle && withinDist) {
         print("cate 1_2");
@@ -679,6 +681,7 @@ function mouseClicked() {
 function draw() {
     background(246, 244, 236);
     noStroke();
+    scale(0.70, 0.70);
     category_1_table = fill_category_table(1);
     category_2_table = fill_category_table(2);
     category_3_table = fill_category_table(3);
@@ -696,15 +699,15 @@ function draw() {
     textAlign(LEFT);
     textSize(66);
     textStyle(BOLD);
-    text("Desinformation on global warning", 780, 110);
+    text("Desinformation on global warning", 880, 110);
     textFont("Montserrat");
     textSize(28);
     textStyle(NORMAL);
-    text("Collection of tweets categorized by type of misinformation", 1040, 170);
+    text("Collection of tweets categorized by type of misinformation", 1140, 170);
     textSize(13);
     textStyle(ITALIC);
-    text("dataset from Critical Climate Machine by Gaëtan Robillard", 1500, 1000);
-    text("design by Clara Balzano - Louise Delrieu - Elise Gondange", 1500, 1020);
+    text("dataset from Critical Climate Machine by Gaëtan Robillard", 1600, 1000);
+    text("design by Clara Balzano - Louise Delrieu - Elise Gondange", 1600, 1020);
 }
 var __MARGIN_SIZE = 0;
 function __desiredCanvasWidth() {

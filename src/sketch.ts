@@ -61,6 +61,9 @@ let category_1_table_color=['#7580ED','#B7BDFB','#5562E5','#7580ED',     '#919AF
 
 var cate_display =' ';
 
+let scale_x = 0.7;
+let scale_y = 0.7;
+
 
 
 function preload() {  
@@ -69,7 +72,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1920, 1080);
+  p6_CreateCanvas()
+  
+
   for(var i = 0; i < data_table.getRowCount(); i++)
     {
       tweet_table.push(data_table.getString(i,3));
@@ -77,6 +82,7 @@ function setup() {
     }
     
 }
+
 
 function windowResized() {
     p6_ResizeCanvas()
@@ -88,21 +94,21 @@ function mouseClicked() {
   
 
   //cate_3
-  var x=710
-  var y = 780
-  var radius = category_sum_table[2]*exp(0.4)/2
+  var x=710*scale_x
+  var y = 780*scale_y
+  var radius = category_sum_table[2]*exp(0.4)/2 *scale_x
   let magnitude = dist(mouseX, mouseY, x, y);
   
   
-  let origin = createVector(710,780);
-  let target = createVector(mouseX - 710, (mouseY - 780) * -1);
+  let origin = createVector(710*scale_x,780*scale_x);
+  let target = createVector(mouseX - 710*scale_x, (mouseY - 780*scale_x) * -1);
   let angle = origin.angleBetween(target);
  
   
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  let withinDist = magnitude > radius-35 && magnitude < radius ;
+  let withinDist = magnitude > (radius-35)*scale_x && magnitude < radius ;
   let withinAngle = angle > -1.17 && angle < -0.84;
   
 
@@ -132,14 +138,14 @@ function mouseClicked() {
   
   
   //cate_5 270, 850,category_sum_table[4]*exp(0.4)-70)
-  x=270
-  y = 850
-  radius = category_sum_table[4]*exp(0.4)/2
+  x=270*scale_x
+  y = 850*scale_x
+  radius = category_sum_table[4]*exp(0.4)/2*scale_x
   magnitude = dist(mouseX, mouseY, x, y);
   
   
-  origin = createVector(270,850);
-  target = createVector(mouseX - 270, (mouseY - 850) * -1);
+  origin = createVector(270*scale_x,850*scale_x);
+  target = createVector(mouseX - 270*scale_x, (mouseY - 850*scale_x) * -1);
   angle = origin.angleBetween(target);
  
   
@@ -147,7 +153,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > radius-35 && magnitude < radius;
+  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
   withinAngle = angle > 1.98 && angle < 2.55;
   
 
@@ -169,14 +175,14 @@ function mouseClicked() {
   
   
   //cate_4 450, 490,category_sum_table[3]*exp(0.4)-70)
- x=450
-  y = 490
-  radius = category_sum_table[3]*exp(0.4)/2
+ x=450*scale_x
+  y = 490*scale_x
+  radius = category_sum_table[3]*exp(0.4)/2*scale_x
   magnitude = dist(mouseX, mouseY, x, y);
   
   
-  origin = createVector(450,490);
-  target = createVector(mouseX - 450, (mouseY - 490) * -1);
+  origin = createVector(450*scale_x,490*scale_x);
+  target = createVector(mouseX - 450*scale_x, (mouseY - 490*scale_x) * -1);
   angle = origin.angleBetween(target);
  
   
@@ -184,7 +190,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > radius-35 && magnitude < radius;
+  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
   withinAngle = angle < -2.27 && angle > -2.5;
   
 
@@ -226,14 +232,14 @@ function mouseClicked() {
   
   
   //cate_2. 200, 240,category_sum_table[1]*exp(0.4)-70)
-  x=200
-  y = 240
-  radius = category_sum_table[1]*exp(0.4)/2
+  x=200*scale_x
+  y = 240*scale_x
+  radius = category_sum_table[1]*exp(0.4)/2*scale_x
   magnitude = dist(mouseX, mouseY, x, y);
   
   
-  origin = createVector(200,240);
-  target = createVector(mouseX - 200, (mouseY - 240) * -1);
+  origin = createVector(200*scale_x,240*scale_x);
+  target = createVector(mouseX - 200*scale_x, (mouseY - 240*scale_x) * -1);
   angle = origin.angleBetween(target);
  
   
@@ -241,7 +247,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > radius-35 && magnitude < radius;
+  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
   withinAngle = (angle > 2.8 && angle < PI)||(angle<-0.88 && angle>-PI)
   
 
@@ -264,14 +270,14 @@ function mouseClicked() {
   
   //cate1 550, 170,category_sum_table[0]*exp(0.4)-70)
   
-   x=550
-  y = 170
-  radius = category_sum_table[0]*exp(0.4)/2
+   x=550*scale_x
+  y = 170*scale_x
+  radius = category_sum_table[0]*exp(0.4)/2*scale_x
   magnitude = dist(mouseX, mouseY, x, y);
   
   
-  origin = createVector(550,170);
-  target = createVector(mouseX - 550, (mouseY - 170) * -1);
+  origin = createVector(550*scale_x,170*scale_x);
+  target = createVector(mouseX - 550*scale_x, (mouseY - 170*scale_x) * -1);
   angle = origin.angleBetween(target);
  
   
@@ -279,7 +285,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > radius-35 && magnitude < radius;
+  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
   withinAngle = angle > -1.8 && angle < -1.4;
   
 
@@ -353,6 +359,8 @@ function draw() {
   background(246, 244, 236);
   noStroke();
 
+  scale(0.70,0.70)
+
   category_1_table = fill_category_table(1);
   category_2_table= fill_category_table(2);
   category_3_table= fill_category_table(3);
@@ -379,7 +387,7 @@ function draw() {
   
   textSize(66);
   textStyle(BOLD);
-  text("Desinformation on global warning",780,110)
+  text("Desinformation on global warning",880,110)
   
   //textSize(40);
   //textStyle(BOLD);
@@ -388,14 +396,14 @@ function draw() {
   textFont("Montserrat");
   textSize(28);
   textStyle(NORMAL);
-  text("Collection of tweets categorized by type of misinformation",1040,170)
+  text("Collection of tweets categorized by type of misinformation",1140,170)
   
   
   
   textSize(13);
   textStyle(ITALIC);
-  text("dataset from Critical Climate Machine by Gaëtan Robillard",1500,1000)
-  text("design by Clara Balzano - Louise Delrieu - Elise Gondange",1500,1020)
+  text("dataset from Critical Climate Machine by Gaëtan Robillard",1600,1000)
+  text("design by Clara Balzano - Louise Delrieu - Elise Gondange",1600,1020)
   
   
   

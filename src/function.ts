@@ -137,6 +137,7 @@ function draw_tweet(cate)
     {
     fill( 245, 245, 245,90);
     rect(0,0,1920, 1080);
+      
     pieChart(category_sum_table[0]*exp(0.4),  category_1_table_angle,550, 170,category_1_table_color);
     fill(31, 48, 199)
     circle(550, 170,category_sum_table[0]*exp(0.4)-70)
