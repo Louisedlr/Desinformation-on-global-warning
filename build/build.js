@@ -35,9 +35,9 @@ function pieChart(diameter, data, x, y, color_table) {
     }
 }
 function draw_pie_chart() {
-    pieChart(category_sum_table[4] * exp(0.4), category_5_table_angle, 270, 850, category_5_table_color);
+    pieChart(category_sum_table[4] * exp(0.4), category_5_table_angle, 270, 840, category_5_table_color);
     fill(171, 28, 36);
-    circle(270, 850, category_sum_table[4] * exp(0.4) - 70);
+    circle(270, 840, category_sum_table[4] * exp(0.4) - 70);
     textSize(39);
     textFont("Montserrat");
     textStyle(BOLD);
@@ -465,9 +465,9 @@ function draw_tweet(cate) {
     if (cate === "5_1") {
         fill(245, 245, 245, 90);
         rect(0, 0, 1920, 1080);
-        pieChart(category_sum_table[4] * exp(0.4), category_5_table_angle, 270, 850, category_5_table_color);
+        pieChart(category_sum_table[4] * exp(0.4), category_5_table_angle, 270, 840, category_5_table_color);
         fill(171, 28, 36);
-        circle(270, 850, category_sum_table[4] * exp(0.4) - 70);
+        circle(270, 840, category_sum_table[4] * exp(0.4) - 70);
         fill(255, 255, 255);
         textFont("Montserrat");
         textSize(35);
@@ -490,9 +490,9 @@ function draw_tweet(cate) {
     if (cate === "5_2") {
         fill(245, 245, 245, 90);
         rect(0, 0, 1920, 1080);
-        pieChart(category_sum_table[4] * exp(0.4), category_5_table_angle, 270, 850, category_5_table_color);
+        pieChart(category_sum_table[4] * exp(0.4), category_5_table_angle, 270, 840, category_5_table_color);
         fill(171, 28, 36);
-        circle(270, 850, category_sum_table[4] * exp(0.4) - 70);
+        circle(270, 840, category_sum_table[4] * exp(0.4) - 70);
         fill(255, 255, 255);
         textFont("Montserrat");
         textSize(35);
