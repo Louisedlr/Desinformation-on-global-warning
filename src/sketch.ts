@@ -67,7 +67,7 @@ let scale_y = 0.7;
 
 
 function preload() {  
-  data_table = loadTable('../../data.csv', 'csv');
+  data_table = loadTable('./data.csv', 'csv');
   img_profil= loadImage('../user.png');
 }
 
