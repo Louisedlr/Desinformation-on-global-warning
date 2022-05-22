@@ -541,7 +541,7 @@ function preload() {
     img_profil = loadImage('../user.png');
 }
 function setup() {
-    p6_CreateCanvas();
+    createCanvas(1920, 1080);
     for (var i = 0; i < data_table.getRowCount(); i++) {
         tweet_table.push(data_table.getString(i, 3));
         category_table.push(data_table.getString(i, 5));
@@ -581,16 +581,17 @@ function mouseClicked() {
     origin = createVector(270 * scale_x, 850 * scale_x);
     target = createVector(mouseX - 270 * scale_x, (mouseY - 850 * scale_x) * -1);
     angle = origin.angleBetween(target);
+    print(angle);
     withinDist = magnitude > radius - 35 * scale_x && magnitude < radius;
-    withinAngle = angle > 1.98 && angle < 2.55;
-    if (withinAngle && withinDist) {
-        print("cate 5_1");
-        cate_display = "5_1";
-    }
-    withinAngle = (angle > 2.55 && angle < PI) || (angle < 1.98 && angle > -PI);
+    withinAngle = angle > -1.21 && angle < 2.8;
     if (withinAngle && withinDist) {
         print("cate 5_2");
         cate_display = "5_2";
+    }
+    withinAngle = (angle > 2.8 && angle < PI) || (angle < -1.21 && angle > -PI);
+    if (withinAngle && withinDist) {
+        print("cate 5_1");
+        cate_display = "5_1";
     }
     x = 450 * scale_x;
     y = 490 * scale_x;
@@ -645,7 +646,6 @@ function mouseClicked() {
     origin = createVector(550 * scale_x, 170 * scale_x);
     target = createVector(mouseX - 550 * scale_x, (mouseY - 170 * scale_x) * -1);
     angle = origin.angleBetween(target);
-    print(angle);
     withinDist = magnitude > radius - 35 * scale_x && magnitude < radius;
     withinAngle = angle > -1.8 && angle < -1.4;
     if (withinAngle && withinDist) {
@@ -681,7 +681,7 @@ function mouseClicked() {
 function draw() {
     background(246, 244, 236);
     noStroke();
-    scale(0.70, 0.70);
+    scale(scale_x, scale_y);
     category_1_table = fill_category_table(1);
     category_2_table = fill_category_table(2);
     category_3_table = fill_category_table(3);
@@ -691,7 +691,7 @@ function draw() {
     category_2_table_angle = fill_category_angle(2, category_2_table);
     category_3_table_angle = fill_category_angle(3, category_3_table);
     category_4_table_angle = fill_category_angle(4, category_4_table);
-    category_5_table_angle = fill_category_angle(1, category_5_table);
+    category_5_table_angle = fill_category_angle(5, category_5_table);
     draw_pie_chart();
     draw_tweet(cate_display);
     textFont("Raleway");

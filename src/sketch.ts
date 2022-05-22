@@ -72,8 +72,8 @@ function preload() {
 }
 
 function setup() {
-  p6_CreateCanvas()
-  
+  //p6_CreateCanvas()
+  createCanvas(1920, 1080);
 
   for(var i = 0; i < data_table.getRowCount(); i++)
     {
@@ -149,27 +149,27 @@ function mouseClicked() {
   angle = origin.angleBetween(target);
  
   
-  //print(angle)
+  print(angle)
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
   withinDist =  magnitude > radius-35*scale_x && magnitude < radius;
-  withinAngle = angle > 1.98 && angle < 2.55;
+  withinAngle = angle > -1.21 && angle < 2.8;
   
 
   
   if(withinAngle &&  withinDist) 
     {
-      print("cate 5_1");
-      cate_display = "5_1";
+      print("cate 5_2");
+      cate_display = "5_2";
       
     }
-  withinAngle = (angle > 2.55 && angle < PI)||(angle<1.98 && angle>-PI)
+  withinAngle = (angle > 2.8 && angle < PI)||(angle<-1.21 && angle>-PI)
   
   if(withinAngle &&  withinDist) 
     {
-      print("cate 5_2");
-      cate_display = "5_2";
+      print("cate 5_1");
+      cate_display = "5_1";
       
     }
   
@@ -281,7 +281,7 @@ function mouseClicked() {
   angle = origin.angleBetween(target);
  
   
-  print(angle)
+  //print(angle)
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
@@ -359,7 +359,7 @@ function draw() {
   background(246, 244, 236);
   noStroke();
 
-  scale(0.70,0.70)
+  scale(scale_x,scale_y)
 
   category_1_table = fill_category_table(1);
   category_2_table= fill_category_table(2);
@@ -370,7 +370,7 @@ function draw() {
   category_2_table_angle = fill_category_angle(2,category_2_table);
   category_3_table_angle = fill_category_angle(3,category_3_table);
   category_4_table_angle = fill_category_angle(4,category_4_table);
-  category_5_table_angle = fill_category_angle(1,category_5_table);
+  category_5_table_angle = fill_category_angle(5,category_5_table);
   
   
   

@@ -47,14 +47,16 @@ function pieChart(diameter, data, x, y,color_table) {
       let color = map(i, 0, data.length, 0, 255);
       fill(color_table[i]);
       
-    arc(
-        x,
-        y,
-        diameter,
-        diameter,
-        lastAngle,
-        lastAngle + radians(data[i])
-      );
+        arc(
+          x,
+          y,
+          diameter,
+          diameter,
+          lastAngle,
+          lastAngle + radians(data[i])
+        );
+      
+    
       
       lastAngle += radians(data[i]);
     }
