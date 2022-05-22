@@ -108,7 +108,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  let withinDist = magnitude > (radius-35)*scale_x && magnitude < radius ;
+  let withinDist = magnitude > radius-35*scale_x && magnitude < radius ;
   let withinAngle = angle > -1.17 && angle < -0.84;
   
 
@@ -153,7 +153,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
+  withinDist =  magnitude > radius-35*scale_x && magnitude < radius;
   withinAngle = angle > 1.98 && angle < 2.55;
   
 
@@ -190,7 +190,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
+  withinDist =  magnitude > radius-35*scale_x && magnitude < radius;
   withinAngle = angle < -2.27 && angle > -2.5;
   
 
@@ -247,7 +247,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
+  withinDist =  magnitude > radius-35*scale_x && magnitude < radius;
   withinAngle = (angle > 2.8 && angle < PI)||(angle<-0.88 && angle>-PI)
   
 
@@ -285,7 +285,7 @@ function mouseClicked() {
   //print(radians(category_3_table_angle[0])). magnitude > radius && 
  
   
-  withinDist =  magnitude > (radius-35)*scale_x && magnitude < radius;
+  withinDist =  magnitude > radius-35*scale_x && magnitude < radius;
   withinAngle = angle > -1.8 && angle < -1.4;
   
 

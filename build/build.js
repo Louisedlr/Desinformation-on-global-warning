@@ -558,7 +558,7 @@ function mouseClicked() {
     var origin = createVector(710 * scale_x, 780 * scale_x);
     var target = createVector(mouseX - 710 * scale_x, (mouseY - 780 * scale_x) * -1);
     var angle = origin.angleBetween(target);
-    var withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
+    var withinDist = magnitude > radius - 35 * scale_x && magnitude < radius;
     var withinAngle = angle > -1.17 && angle < -0.84;
     if (withinAngle && withinDist) {
         print("cate 3_1");
@@ -581,7 +581,7 @@ function mouseClicked() {
     origin = createVector(270 * scale_x, 850 * scale_x);
     target = createVector(mouseX - 270 * scale_x, (mouseY - 850 * scale_x) * -1);
     angle = origin.angleBetween(target);
-    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
+    withinDist = magnitude > radius - 35 * scale_x && magnitude < radius;
     withinAngle = angle > 1.98 && angle < 2.55;
     if (withinAngle && withinDist) {
         print("cate 5_1");
@@ -599,7 +599,7 @@ function mouseClicked() {
     origin = createVector(450 * scale_x, 490 * scale_x);
     target = createVector(mouseX - 450 * scale_x, (mouseY - 490 * scale_x) * -1);
     angle = origin.angleBetween(target);
-    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
+    withinDist = magnitude > radius - 35 * scale_x && magnitude < radius;
     withinAngle = angle < -2.27 && angle > -2.5;
     if (withinAngle && withinDist) {
         print("cate 4_2");
@@ -627,7 +627,7 @@ function mouseClicked() {
     origin = createVector(200 * scale_x, 240 * scale_x);
     target = createVector(mouseX - 200 * scale_x, (mouseY - 240 * scale_x) * -1);
     angle = origin.angleBetween(target);
-    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
+    withinDist = magnitude > radius - 35 * scale_x && magnitude < radius;
     withinAngle = (angle > 2.8 && angle < PI) || (angle < -0.88 && angle > -PI);
     if (withinAngle && withinDist) {
         print("cate 2_1");
@@ -646,7 +646,7 @@ function mouseClicked() {
     target = createVector(mouseX - 550 * scale_x, (mouseY - 170 * scale_x) * -1);
     angle = origin.angleBetween(target);
     print(angle);
-    withinDist = magnitude > (radius - 35) * scale_x && magnitude < radius;
+    withinDist = magnitude > radius - 35 * scale_x && magnitude < radius;
     withinAngle = angle > -1.8 && angle < -1.4;
     if (withinAngle && withinDist) {
         print("cate 1_2");
